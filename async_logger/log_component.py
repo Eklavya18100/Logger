@@ -11,11 +11,7 @@ class LogComponent(ILog):
         self.queue = asyncio.Queue()
         now = datetime.datetime.now()
         self.last_date = now.strftime('%Y_%m_%d')
-<<<<<<< HEAD
-        os.makedirs('logs', exist_ok= True)
-=======
         os.makedirs('logs',exist_ok=True)
->>>>>>> 540f7ee6e928d57cadad95a247bba428bea12605
         self.last_filename = f"logs/{now.strftime('%Y_%m_%d_%H_%M_%S')}.txt"
 
 
@@ -59,9 +55,6 @@ class LogComponent(ILog):
         while self.is_running or not self.queue.empty():
             message = await self.queue.get()
 
-<<<<<<< HEAD
-            await self.handle(message)
-=======
             # await self.handle(message)
             
 
@@ -76,4 +69,3 @@ class LogComponent(ILog):
                     log_file.write(message + '\n')
             finally:
                 self.queue.task_done()
->>>>>>> 540f7ee6e928d57cadad95a247bba428bea12605
