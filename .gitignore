@@ -1,0 +1,7 @@
+<<<<<<< HEAD
+logs/*
+=======
+logs/**
+>>>>>>> 540f7ee6e928d57cadad95a247bba428bea12605
+.idea/
+**/__pycache__/
